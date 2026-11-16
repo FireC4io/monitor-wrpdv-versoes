@@ -1,7 +1,7 @@
 {
-  "versao": "0.1.12",
-  "url": "https://raw.githubusercontent.com/FireC4io/monitor-wrpdv-versoes/main/teste/0.1.12/agente-wrpdv.exe",
+  "versao": "0.1.13",
+  "url": "https://raw.githubusercontent.com/FireC4io/monitor-wrpdv-versoes/main/teste/0.1.13/agente-wrpdv.exe",
   "tamanho": 4462592,
-  "sha256": "12255b176b1cb9018fb2eb90fdc94458320c46a2d0cac1654a0939868d3b8d15",
-  "assinatura": "62cca5207b40764c947da47defd358b6ff7801e77d8737a92d051cf5a6186458d7e07165af4b394c2b0a7622da9ec088a2f4f328945b0d28c297bb2215615609"
+  "sha256": "bf312b30443d29961b050fc27ac0320e3fc413c296a2799994a438a3496d7798",
+  "assinatura": "7c1f30f3c68574d5763f8feef9da5a1d26caddeeb88408d4c98419a90dfc4d5d4d9a4e3d4ccc90003392465450c1f84940b08ee4a46bac104c13db9a132a1908"
 }
