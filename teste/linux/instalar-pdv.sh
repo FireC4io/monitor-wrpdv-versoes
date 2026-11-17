@@ -11,7 +11,8 @@
 #    sudo bash instalar-pdv.sh
 #  Em lote (WinSCP em modo script, SSH), sem perguntas:
 #    sudo TOKEN=wrpdv_... bash instalar-pdv.sh
-#  Opcionais: CANAL=teste (versões de teste), PASTA_FRENTE=/home/rpdv/frente
+#  Opcionais: CANAL=teste (versões de teste), PASTA_FRENTE=/home/rpdv/frente,
+#             NOME=pdv103 (nome na central, se o do computador for genérico)
 # ==========================================================================
 set -euo pipefail
 
@@ -81,7 +82,7 @@ install -m 755 "$BIN" "$DESTINO/agente-wrpdv"
 TOML="$DESTINO/agente.toml"
 novo=0
 [ -f "$TOML" ] || novo=1
-AGENTE_TOKEN="$TOKEN" AGENTE_CENTRAL="$CENTRAL" "$DESTINO/agente-wrpdv" --config "$TOML" --configurar
+AGENTE_TOKEN="$TOKEN" AGENTE_CENTRAL="$CENTRAL" AGENTE_NOME="${NOME:-}" "$DESTINO/agente-wrpdv" --config "$TOML" --configurar
 if [ "$novo" = 1 ]; then
     sed -i "s#^frente = { pasta = \"[^\"]*\"#frente = { pasta = \"$PASTA_FRENTE/Cm\"#" "$TOML"
 fi
